@@ -1,0 +1,50 @@
+.header{
+    height: 160vh;
+    background: url('./src/images/header-logo-2.jpg') no-repeat center center;
+    background: url('./src/images/header-logo.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.header-inner{
+    height: 100%;
+    background-color: rgba(233, 44, 44, 0.425);
+    background-color: rgba(40, 60, 99, 0.719);
+    padding-left: 20px;
+    position: relative;
+}
+
+.head-title{
+    font-size: 17vw;
+    line-height: 20vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.507);
+
+}
+
+.subtitle{
+    font-size: 24px;
+    line-height: 24px;
+    word-spacing: -1px;
+    color: white;
+    margin-top: 50px;
+}
+
+.bottom-left{
+    position: absolute;;
+    bottom: 0%;
+    left: 0%;
+    background-color: white;
+    height: 30vh;
+    width: 50vw;
+    
+}
+
+.flick{
+    width: 60%;
+    margin: 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
