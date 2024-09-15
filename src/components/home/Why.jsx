@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import './Why.css'
 function Why() {
-    const [coordinates, setCoordinates] = useState({})
-    const [image, setImage] = useState()
+    const [cursorStyle, setCursorStyle] = useState({})
+    const [image, setImage] = useState(`./src/images/legendary.webp`)
     const [titles, setTitles] = useState([
         `Custom Website Design`,
         `E-commerce Solutions`,
@@ -11,24 +11,22 @@ function Why() {
     ])
 
     const handleMouseMove=(event)=> {
-        document.getElementById('cursor-follow').style.display = 'block';
-        setTimeout(() => {
-            setCoordinates({
+        const deg = ((event.clientX - (screen.width/2))/ (screen.width/2))*35;
+        
+            setCursorStyle({
 
-                transform: `translate(${Math.min(event.clientX,screen.width - 200)-100}px,${event.clientY-100}px)`
+                transform: `translate(${Math.min(event.clientX,screen.width - 450)-100}px,${event.clientY-100}px) rotate(${deg}deg)`
             })
-        }, 350)
         
     }
     const handleMouseLeave = (event) => {
-        document.getElementById('cursor-follow').style.display = 'none';
+        document.getElementById('cursor-follow').style.transform = 'translate(0,0)';
     }
 
     const handleMouseEnter = (event) => {
         const imageList = [`legendary.webp`, `bar.webp`, `genk.webp`,`phone.webp`]
         const eleId = event.target.id.replace("why-sec-","");
-        setImage(`./src/images/${imageList[parseInt(eleId)]}`)
-        console.log(eleId);
+        eleId && setImage(`./src/images/${imageList[parseInt(eleId)]}`)
         
         
     }
@@ -43,7 +41,7 @@ function Why() {
             </div>
         })}
       </div>
-      <div className="cursor-follow" style={coordinates} id='cursor-follow'>
+      <div className="cursor-follow" style={cursorStyle} id='cursor-follow'>
         <img src={image} alt="" />
       </div>
     </div>

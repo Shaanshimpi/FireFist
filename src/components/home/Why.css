@@ -12,14 +12,20 @@
     height: 200px;
     top: 0;
     left: 0;
-    border: 1px solid gainsboro;
     z-index: -1;
+
+    transition-duration: 200ms;
 }
 
 .cursor-follow > img{
-    object-fit: contain;
-    mix-blend-mode: difference;
     height: 200px;
+    
+}
+
+.why{
+    z-index: 0;
+    color: white;
+    background: black !important;
 }
 
 .why-section-container{
@@ -35,7 +41,7 @@
 }
 
 .why-section {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #1b1919;
     flex: 1;
     display: flex;
     align-items: end;
@@ -50,10 +56,22 @@
 }
 
 .why-section > h3{
+    /* z-index: 2; */
     width: 40%;
     padding-right: 10%;
-    color: black !important;
-    background-color: white !important;
-    mix-blend-mode: difference;
+    color: white !important;
+    mix-blend-mode: difference !important;
+}
+
+@media (max-width: 768px) {
+    .cursor-follow{
+        display: none ;
+    }
+}
+
+@media (max-width: 600px){
+    .why{
+        display: none !important;
+    }
     
 }

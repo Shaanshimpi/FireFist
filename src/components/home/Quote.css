@@ -9,7 +9,7 @@
 
 .quote-text{
     font-weight: 300;
-    font-size: 44px;
+    font-size: 3.4vw;
     text-align: center;
     width: 65%;
     text-transform: uppercase;
@@ -17,10 +17,27 @@
 
 .quote-sub{
     margin-top: 30px;
-    padding-left: 400px;
-    width: 300px;
+    padding-left: 30vw;
+    width: 50vw;
+    text-align: center;
+
 }
 
 .quote{
-   border-bottom: 1px solid #cccccc73;
+   /* border-bottom: 1px solid #cccccc73; */
+}
+
+@media (max-width: 768px){
+    .quote-text{
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 480px){
+    .quote-text{
+        font-size: 6vw;
+    }
+    .quote-sub{
+        display: none;
+    }
 }

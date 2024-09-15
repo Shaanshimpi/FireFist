@@ -1,6 +1,5 @@
 import './Quote.css'
 
-const quote =<>When you start a new project, it's essential to choose the right road to move forward.<strong> Thankfully, Ive been there before, and I know where to turn on a highway.</strong></>
 function Quote() {
   return (
     <div className="quote">
