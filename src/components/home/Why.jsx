@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Why.css'
 function Why() {
     const [cursorStyle, setCursorStyle] = useState({})
-    const [image, setImage] = useState(`./src/images/legendary.webp`)
+    const [image, setImage] = useState(`./public/images/legendary.webp`)
     const [titles, setTitles] = useState([
         `Custom Website Design`,
         `E-commerce Solutions`,
@@ -15,7 +15,7 @@ function Why() {
         
             setCursorStyle({
 
-                transform: `translate(${Math.min(event.clientX,screen.width - 450)-100}px,${event.clientY-100}px) rotate(${deg}deg)`
+                transform: `translate(${Math.min(event.clientX,screen.width - 250)-100}px,${event.clientY-100}px) rotate(${deg}deg)`
             })
         
     }
@@ -26,7 +26,7 @@ function Why() {
     const handleMouseEnter = (event) => {
         const imageList = [`legendary.webp`, `bar.webp`, `genk.webp`,`phone.webp`]
         const eleId = event.target.id.replace("why-sec-","");
-        eleId && setImage(`./src/images/${imageList[parseInt(eleId)]}`)
+        eleId && setImage(`./public/images/${imageList[parseInt(eleId)]}`)
         
         
     }
