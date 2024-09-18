@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Why.css'
 function Why() {
     const [cursorStyle, setCursorStyle] = useState({})
-    const [image, setImage] = useState(`./public/images/legendary.webp`)
+    const [image, setImage] = useState(`../images/legendary.webp`)
     const [titles, setTitles] = useState([
         `Custom Website Design`,
         `E-commerce Solutions`,
