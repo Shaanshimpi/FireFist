@@ -1,10 +1,10 @@
-import React,{useState, useRef} from 'react'
+import React,{useState, useRef, useEffect} from 'react'
 import './WhyMob.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin( ScrollTrigger);
 function WhyMob() {
     const [titles, setTitles] = useState([
         `Custom Website Design`,
@@ -12,40 +12,45 @@ function WhyMob() {
         `Web Application Development`,
         `Mobile App Development`
     ])
-    const main = useRef();
+    const [image, setImage] = useState(`../images/legendary.webp`)
+    const imageList = [`legendary.webp`, `bar.webp`, `genk.webp`,`phone.webp`]
   
-    useGSAP(
-      () => {
-        const boxes = gsap.utils.toArray('.why-mob-section-container');
-        boxes.forEach((box) => {
-          gsap.to(box, {
-            x: -500,
-            scrollTrigger: {
-              trigger: box,
-              start: 'bottom center',
-              end: 'top center',
-              scrub: false,
-              markers: true,
-            },
-          });
+    useEffect(()=>{
+      const boxes = gsap.utils.toArray('.whyMobSection');
+      boxes.forEach((box) => {
+        gsap.to(box, {
+          x: `-300vw`,
+          background:`black`,
+          color:`white`,
+          scrollTrigger: {
+            trigger: box,
+            scrub:2,
+            start: 'top top',
+            end: 'bottom 70%',
+            markers: false,
+            pin: true
+          }
         });
-      },
-      { scope: main }
-    );
+      });
+      
+      return () => {
+        gsap.killTweensOf(boxes);
+      }
+    },[])
   return (
-    <div className='why-mob'  ref={main}>
-        <h5 className="why-mob-title">We're here for you if need</h5>
-      <div className="why-mob-section-container">
-        {titles.map((e,i)=>{
-            return <div className="why-mob-section" key={i} id={`why-mob-sec-`+i} >
-                <div>
-                <h3>{e}</h3>  
-
-                </div>
-            </div>
-        })}
-      </div>
+    <>
+    <div className="why-mob">
+      {
+        titles.map((title, i) => (
+          <div className="whyMobSection" key={i} id={`whyMobSection-${i}`}>
+            <h3>{title}</h3>
+            <img src={`../images/${imageList[i]}`} alt="" />
+          </div>
+        ))
+      }
     </div>
+
+    </>
   )
 }
 

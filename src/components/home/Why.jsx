@@ -26,7 +26,7 @@ function Why() {
     const handleMouseEnter = (event) => {
         const imageList = [`legendary.webp`, `bar.webp`, `genk.webp`,`phone.webp`]
         const eleId = event.target.id.replace("why-sec-","");
-        eleId && setImage(`./public/images/${imageList[parseInt(eleId)]}`)
+        eleId && setImage(`../images/${imageList[parseInt(eleId)]}`)
         
         
     }
