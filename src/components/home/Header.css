@@ -1,7 +1,7 @@
 .header{
     height: 130vh;
     background: url('./public/images/header-logo.jpg') no-repeat center center;
-    background: url('./images/header-logo-2.jpg') no-repeat center center;
+    background: url('../images/header-logo-2.jpg') no-repeat center center;
     
     background-size: cover;
     background-attachment: fixed;
