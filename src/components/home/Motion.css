@@ -1,0 +1,58 @@
+.motion{
+    height: 150vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.motion-text-div{
+    font-size: 10vw;
+    padding: 1vw;
+}
+
+.motion-text-bottom{
+    display: flex;
+    justify-content: end;
+}
+
+.plus-div{
+    height: 10vw;
+    width: 10vw;
+    /* border: 1px solid white; */
+    position: relative;
+}
+
+.plus-div > div{
+    position:absolute;
+    background-color: white;
+}
+
+.plus-vert{
+    left:50%;
+    transform: translateX(-50%);
+    width: 3vw;
+    height: 10vw;
+}
+
+.plus-hori{
+    top:50%;
+    transform: translateY(-50%);
+    height: 3vw;
+    width: 10vw;
+
+}
+
+
+.missile{
+    height: 200px;
+    /* top:50%;
+    left:50%; */
+    scale: 0;
+}
+.explosion{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red !important;
+    transform: translate(50px,-150px);
+    opacity: 0;
+}

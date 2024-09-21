@@ -1,19 +1,39 @@
+import React, { useEffect, useState } from 'react';
+
 import './App.css'
 import Header from './components/home/Header'
 import Quote from './components/home/Quote'
 import Why from './components/home/Why'
 import WhyMob from './components/home/WhyMob'
-function App() {
+import Loading from './components/home/Loading';
+import BgWidening from './components/home/BgWidening';
+import Motion from './components/home/motion';
 
+function App() {
+const [loading, setLoading] = useState(false);
+
+  useEffect(() =>{
+    setLoading(false);
+    
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  },[])
   return (
     <>
-      <Header />
-      <Quote />
-      <Why />
-      <WhyMob/>
-      <div style={{height:`100vh`}}>
-        <h1>Hello World</h1>
-      </div>
+      {
+        loading
+        ?<Loading/>
+        :<>
+          <Header />
+          <Quote />
+          <Why />
+          <WhyMob/>
+          <Motion />
+          {/* <BgWidening /> */}
+          <div style={{height:`100vh`}}></div>
+        </>
+      }
     </>
   )
 }

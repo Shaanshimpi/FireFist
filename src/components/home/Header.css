@@ -5,6 +5,7 @@
     
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
     
 }
 
@@ -26,6 +27,7 @@
     justify-content: space-around;
     color: white ;
 
+    padding-top: 10px;
     font-size: 1vw;
 }
 
@@ -91,6 +93,12 @@
 
     font-size: 12px;
     font-weight: 600;
+}
+
+
+/* animation */
+.head-anim-text{
+    opacity: 0;
 }
 
 @media (max-width: 740px) {

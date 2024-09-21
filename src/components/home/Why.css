@@ -14,7 +14,7 @@
     left: 0;
     z-index: -1;
 
-    transition-duration: 200ms;
+    transition-duration: 50ms;
 }
 
 .cursor-follow > img{

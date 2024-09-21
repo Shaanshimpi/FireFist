@@ -1,0 +1,10 @@
+
+.widening{
+    height: 500vh;
+}
+
+.widening > h3{
+    font-size: 4vw;
+    text-align: center;
+    /* width: 50%; */
+}
