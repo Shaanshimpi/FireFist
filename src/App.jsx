@@ -10,10 +10,10 @@ import BgWidening from './components/home/BgWidening';
 import Motion from './components/home/motion';
 
 function App() {
-const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(true);
 
   useEffect(() =>{
-    setLoading(false);
+    setLoading(true);
     
     setTimeout(() => {
       setLoading(false);
