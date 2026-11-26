@@ -12,7 +12,7 @@ function WhyMob() {
         `Web Application Development`,
         `Mobile App Development`
     ])
-    const [image, setImage] = useState(`../images/legendary.webp`)
+    const [image, setImage] = useState(`/images/legendary.webp`)
     const imageList = [`legendary.webp`, `bar.webp`, `genk.webp`,`phone.webp`]
   
     useEffect(()=>{
@@ -44,7 +44,7 @@ function WhyMob() {
         titles.map((title, i) => (
           <div className="whyMobSection" key={i} id={`whyMobSection-${i}`}>
             <h3>{title}</h3>
-            <img src={`../images/${imageList[i]}`} alt="" />
+            <img src={`/images/${imageList[i]}`} alt="" />
           </div>
         ))
       }

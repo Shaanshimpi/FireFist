@@ -3,7 +3,7 @@ import './BgWidening.css'
 
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from 'gsap-trial/SplitText';
+import { SplitText } from 'gsap/SplitText';
 function BgWidening() {
     gsap.registerPlugin(ScrollTrigger);
     useEffect(() =>{

@@ -88,7 +88,7 @@ function Motion() {
                     </div>
                     <div className="plus-hori plus-dim">
                     </div>
-                    <img className="missile" src="./images/missile.svg" alt="" />
+                    <img className="missile" src="/images/missile.svg" alt="" />
                     <div className="explosion">
                     </div>
                 </div>

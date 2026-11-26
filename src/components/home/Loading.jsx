@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import './Loading.css'
 import { gsap } from 'gsap'
-import  SplitText  from 'gsap-trial/SplitText';
+import { SplitText } from 'gsap/SplitText';
 
 function Loading() {
     gsap.registerPlugin(SplitText);

@@ -10,15 +10,29 @@ import BgWidening from './components/home/BgWidening';
 import Motion from './components/home/Motion';
 
 function App() {
-const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() =>{
-    setLoading(true);
-    
-    setTimeout(() => {
+  useEffect(() => {
+    // Preload critical assets while loader is active
+    const assetsToPreload = [
+      '/images/header-logo-2.jpg',
+      '/images/legendary.webp',
+      '/images/bar.webp',
+      '/images/genk.webp',
+      '/images/phone.webp',
+      '/images/missile.svg'
+    ];
+    assetsToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
-  },[])
+    }, 2800);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       {
