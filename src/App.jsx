@@ -7,7 +7,7 @@ import Why from './components/home/Why'
 import WhyMob from './components/home/WhyMob'
 import Loading from './components/home/Loading';
 import BgWidening from './components/home/BgWidening';
-import Motion from './components/home/motion';
+import Motion from './components/home/Motion';
 
 function App() {
 const [loading, setLoading] = useState(true);
